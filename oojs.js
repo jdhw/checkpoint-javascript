@@ -7,7 +7,7 @@
 // Type your solution immediately below this line:
 
 class Playlist{
-    songs;
+    songs = [];
     constructor(title)
     {
       this.title = title;
@@ -17,6 +17,7 @@ class Playlist{
     addSong(song)
     {
       this.songs = song;
+      return this.songs;
     }
 }
 
@@ -26,10 +27,12 @@ class Playlist{
 // Call the instance's `addSong` method to add a song to the instance's `songs` array
 // Type your solution immediately below this line:
 
-var myPlaylist = new Playlist();
-myPlaylist.addSong("Song1");
+var myPlaylist = new Playlist("title1");
 
+var myArr = [];
+myArr[0] = "Song1";
 
+myPlaylist.addSong(myArr[0]);
 
 // NOTE: THE CODE BELOW IS FOR TESTING PURPOSES. DO NOT REMOVE OR ALTER.
 if(typeof Playlist !== 'undefined') {
